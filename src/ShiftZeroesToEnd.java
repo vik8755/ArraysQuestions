@@ -31,13 +31,15 @@ public class ShiftZeroesToEnd {
             }
         }*/
         // 2nd way of doing this.
-        int j=0;
+        int j=-1;
         for (int i=0;i<arr.length;i++){
             if (arr[i]==0) {
                 j=i;
                 break;
             }
         }
+        // No Zero present in the array.
+        if(j==-1) return arr;
         // Now Start the swaping.
         for (int i=j+1;i<arr.length;i++){
             if(arr[i]!=0){
